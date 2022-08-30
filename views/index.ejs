@@ -8,29 +8,61 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
   <link rel='stylesheet' href='/stylesheets/style.css' />
 
-  <script src="/javascripts/main.js"></script>
+  <script src="/javascripts/main.js" defer></script>
 </head>
 
 <body>
-  <h1>
-    <%= title %>
-  </h1>
-  <p>Welcome to <%= title %>
-  </p>
+  <div class="blur"></div>
+  <div class="container">
 
-  <h3>Lab Repository</h3>
-  <p>Enter the lab repository link below</p>
-  <form onsubmit="runtest(event)">
-    <div class="form-group p-2">
-      <input type="url" name="repolink" class="form-control" id="repolink" placeholder="Repository Link: https://" required />
+    <div class="section-1">
+      <div class="logo">
+        <img src="../assets/fi-lab.svg" alt="mindpalace" />
+      </div>
+
+      <!-- Brief Description -->
+      <div class="description">
+        <div class="welcome">
+          Welcome to
+        </div>
+        <div class="main-desc">
+          FlatIron Lab<br />
+          Test Automator
+        </div>
+        <p>Enter the lab repository link below</p>
+        <!-- form -->
+        <form onsubmit="runtest(event)">
+          <div class="input-box">
+            <input type="url" name="repolink" id="repolink" placeholder="Repository Link: https://" required />
+          </div>
+          <div class="btn-box">
+            <button type="submit" id="submitButton">Submit Link</button>
+          </div>
+
+          <!-- <div class="form-group">
+            <input type="url" name="repolink" class="form-control" id="repolink" placeholder="Repository Link: https://"
+              required />
+          </div>
+
+          <div class="form-group mt-3 ">
+            <button type="submit" class="btn btn-primary" id="submitButton">Submit Link</button>
+          </div>
+        </form> -->
+      </div>
+
+
     </div>
 
-    <div class="form-group p-2">
-      <button type="submit" class="btn btn-primary" id="submitButton">Submit Link</button>
-    </div>
+    <!-- Output -->
+    <div class="section-2">
+      <div id="output">
+        <!-- <div class="robot">
+          <img src="../assets/robot-arm.svg" alt="robot-arm" />
+        </div> -->
 
-    <div id="output"></div>
-  </form>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
